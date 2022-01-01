@@ -4,6 +4,7 @@ const cors = require("cors");
 
 // ! case study -------------- imported body parser part 1
 const bodyParser = require("body-parser");
+var port = process.env.PORT || 5000;
 
 const nav = [
   {
@@ -51,6 +52,6 @@ app.get("/", function (req, res) {
   res.render("index", {});
 });
 
-app.listen(5000, () => {
+var server = app.listen(port, () => {
   console.log("Server Ready on 5000");
 });
